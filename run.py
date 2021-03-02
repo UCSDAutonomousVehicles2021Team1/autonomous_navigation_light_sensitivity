@@ -13,8 +13,6 @@ def main(targets):
     data_config = json.load(open('config/data-params.json'))
     eda_config = json.load(open('config/eda-params.json'))
     evaluate_config = json.load(open('config/evaluate-params.json'))
-    inference_config = json.load(open('config/inference-params.json'))
-    test_config = json.load(open('config/test-params.json'))
 
     if 'data' in targets:
         move_data(**data_config)
@@ -22,6 +20,10 @@ def main(targets):
     
     if 'eda' in targets:
         main_eda(**eda_config)
+        # Execute notebook, convert to HTML
+        convert_notebook(**eda_config)
+        
+        
         
     if 'comparisons' in targets:
         
