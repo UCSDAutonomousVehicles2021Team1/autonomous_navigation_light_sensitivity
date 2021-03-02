@@ -24,10 +24,9 @@ def compare_images(imageA, imageB):
     # index for the images
     s = ssim(imageA, imageB, multichannel=True)
     m = calculate_mse(imageA, imageB)
-    p = calculate_psnr(imageA, imageB)
     # setup the figure
     fig = plt.figure()
-    plt.suptitle("SSIM: %.4f, MSE: %.2f, PSNR: %.3f" % (s, m, p))
+    plt.suptitle("SSIM: %.4f, MSE: %.0f" % (s, m))
     # show first image
     ax = fig.add_subplot(1, 2, 1)
     plt.imshow(imageA, cmap = plt.cm.gray)
