@@ -39,7 +39,7 @@ def main(targets):
         best_model_name = find_best_model(model_names, **evaluate_config)
         
     
-    if 'all' in targets:
+    if 'test' in targets:
         move_data(**data_config)
         main_eda(**eda_config)
         convert_notebook(**eda_config)
