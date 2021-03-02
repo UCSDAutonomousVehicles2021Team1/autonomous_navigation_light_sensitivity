@@ -1,10 +1,16 @@
 import os
 import shutil
 
-def move_data(source, destination):
+def move_data(source, data_fp):
     #Creates the directory to copy data into
-    os.makedirs(destination, exist_ok = True)
+    os.makedirs(data_fp, exist_ok = True)
     
-    dest = os.shutil.move(source, destination)
+    print("Before moving data:")
+    print(os.listdir(source))
     
-    print('Destination path: ' + dest)
+    dest = os.shutil.move(source, data_fp)
+    
+    print("After moving data:")
+    print(os.listdir(source))
+    
+    print('Destination path: ' + data_fp)
