@@ -42,9 +42,8 @@ def main(targets):
     if 'all' in targets:
         move_data(**data_config)
         main_eda(**eda_config)
-        main_eda(**eda_config)
         convert_notebook(**eda_config)
-        model_names = train_models(**training_config)
+        model_names = compare_images(**comparison_config)
         best_model_name = find_best_model(model_names, **evaluate_config)
         print("Found best model: {}".format(best_model_name))
         
