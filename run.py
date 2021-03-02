@@ -1,6 +1,7 @@
 import sys
 import json
 import os
+import cv2
 
 sys.path.insert(0, 'src')
 from etl import move_data
@@ -19,7 +20,12 @@ def main(targets):
         
     
     if 'eda' in targets:
-        main_eda(**eda_config)
+        try:
+            data
+        except NameError:
+            data = cv2.imread(data_config['data_fp'])
+            
+        main_eda(data, **eda_config)
         # Execute notebook, convert to HTML
         convert_notebook(**eda_config)
         
