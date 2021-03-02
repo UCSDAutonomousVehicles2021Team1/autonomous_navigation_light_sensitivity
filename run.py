@@ -7,12 +7,14 @@ sys.path.insert(0, 'src')
 from etl import move_data
 from eda import main_eda
 from utils import convert_notebook
+from compare import compare_images
 from evaluate import find_best_model
 
 def main(targets):
 
     data_config = json.load(open('config/data-params.json'))
     eda_config = json.load(open('config/eda-params.json'))
+    comparison_config = json.load('config/compare-params.json'))
     evaluate_config = json.load(open('config/evaluate-params.json'))
 
     if 'data' in targets:
