@@ -15,7 +15,7 @@ def main(targets):
     data_config = json.load(open('config/data-params.json'))
     eda_config = json.load(open('config/eda-params.json'))
     comparison_config = json.load(open('config/comparison-params.json'))
-    evaluate_config = json.load(open('config/evaluate-params.json'))
+    #evaluate_config = json.load(open('config/evaluate-params.json'))
 
     if 'data' in targets:
         move_data(**data_config)
