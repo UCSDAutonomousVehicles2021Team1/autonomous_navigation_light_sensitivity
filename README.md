@@ -4,7 +4,7 @@ Evaluation of Intel Realsense D455 camera's sensitivity to light. Focuses on the
 
 To run the repository, run ```python run.py test```
 
-### What does it do
+## What does it do
 
 
-### Targets
+## Targets
