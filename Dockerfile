@@ -1,6 +1,6 @@
 FROM ucsdets/datascience-notebook:2020.2-stable
 
-USER ROOT
+USER root
 
 
 # Install python3, pip3
