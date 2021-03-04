@@ -43,7 +43,7 @@ def main(targets):
     
     if 'test' in targets:
         move_data(**data_config)
-        main_eda(**eda_config)
+        main_eda(data, **eda_config)
         convert_notebook(**eda_config)
         model_names = compare_images(**comparison_config)
         best_tuning_result = find_best_model(model_names, **evaluate_config)
