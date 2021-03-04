@@ -7,7 +7,7 @@ sys.path.insert(0, 'src')
 from etl import move_data
 from eda import main_eda
 from utils import convert_notebook
-from compare import compare_images
+from comparison import view_results
 from evaluate import find_best_model
 
 def main(targets):
@@ -34,7 +34,7 @@ def main(targets):
         
         
     if 'comparisons' in targets:
-        
+        view_results(**comparison_config)
         
     
     if 'evaluate' in targets:
