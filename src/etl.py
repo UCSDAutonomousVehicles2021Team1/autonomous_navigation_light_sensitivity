@@ -8,7 +8,7 @@ def move_data(source, data_fp):
     print("Before moving data:")
     print(os.listdir(source))
     
-    dest = shutil.move(source, data_fp)
+    dest = shutil.copy(source, data_fp)
     
     print("After moving data:")
     print(os.listdir(dest))
