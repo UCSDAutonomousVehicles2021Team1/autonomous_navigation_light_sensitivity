@@ -7,7 +7,7 @@ sys.path.insert(0, 'src')
 from etl import move_data
 from eda import main_eda
 from utils import convert_notebook
-from comparison import view_results
+from compare import view_results
 from evaluate import find_best_model
 
 def main(targets):
