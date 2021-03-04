@@ -33,7 +33,7 @@ def main(targets):
         
         
         
-    if 'comparisons' in targets:
+    if 'comparison' in targets:
         view_results(**comparison_config)
         
     
