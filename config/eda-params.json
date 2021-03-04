@@ -1,6 +1,6 @@
 {
-    "rawdir": "data/raw",
-    "outdir": "results/data/",
+    "datadir": "data/default_track.jpg",
+    "outdir": "results/",
     "report_in_path": "notebooks/report.ipynb",
     "report_out_path": "results/report.html"
   
