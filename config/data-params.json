@@ -1,5 +1,5 @@
 {
     "source": "test/testdata/"
-    "destination": "data/"
+    "destination" : "data/"
 
 }
