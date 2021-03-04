@@ -19,7 +19,8 @@ def calculate_mse(imageA, imageB):
     return error
  
 
-def compare_images(imageA, imageB):
+def compare_images(imageA, imageB, outdir):
+    os.makedirs(outdir, exist_ok = True)
     # compute the mean squared error and structural similarity
     # index for the images
     s = ssim(imageA, imageB, multichannel=True)
@@ -37,3 +38,11 @@ def compare_images(imageA, imageB):
     plt.axis("off")
     # show the images
     plt.show()
+    # save figure
+    plt.savefig(os.path.join(outdir, 'metrics.jpg')
+    # store metric values within a dictionary
+    metric_dict = {}
+    metric_dict['SSIM'] = s
+    metric_dict['MSE'] = m
+    
+    return metric_dict
