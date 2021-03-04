@@ -1,5 +1,5 @@
 {
-    "source": "test/testdata/",
+    "source": "test/testdata/images",
     "data_fp" : "data/"
 
 }
