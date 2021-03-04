@@ -38,7 +38,7 @@ def main(targets):
         
     
     if 'evaluate' in targets:
-        best_model_name = find_best_model(model_names, **evaluate_config)
+        best_tuning_result = find_best_model(model_names, **evaluate_config)
         
     
     if 'test' in targets:
@@ -46,8 +46,8 @@ def main(targets):
         main_eda(**eda_config)
         convert_notebook(**eda_config)
         model_names = compare_images(**comparison_config)
-        best_model_name = find_best_model(model_names, **evaluate_config)
-        print("Found best model: {}".format(best_model_name))
+        best_tuning_result = find_best_model(model_names, **evaluate_config)
+        print("Found best tuning result: {}".format(best_tuning_result))
         
     
 if __name__ == '__main__':
