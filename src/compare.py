@@ -8,8 +8,9 @@ import cv2
 
 def view_results(files, outdir):
     os.makedirs(outdir, exist_ok = True)
-    baseline_results(files[0], files[1], outdir)
-    tuned_results(files[0], files[2], outdir)
+    imageA, imageB, imageC = cv2.imread(files[0]), cv2.imread(files[1]), cv2.imread(files[2])
+    baseline_results(imageA, imageB, outdir)
+    tuned_results(imageA, imageC, outdir)
     
 
 def calculate_mse(imageA, imageB):
