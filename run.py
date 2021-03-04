@@ -14,7 +14,7 @@ def main(targets):
 
     data_config = json.load(open('config/data-params.json'))
     eda_config = json.load(open('config/eda-params.json'))
-    comparison_config = json.load('config/compare-params.json'))
+    comparison_config = json.load('config/comparison-params.json'))
     evaluate_config = json.load(open('config/evaluate-params.json'))
 
     if 'data' in targets:
