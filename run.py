@@ -4,7 +4,7 @@ import os
 import cv2
 
 sys.path.insert(0, 'src')
-#from etl import move_data
+from etl import move_data
 #from eda import main_eda
 #from utils import convert_notebook
 from compare import view_results
