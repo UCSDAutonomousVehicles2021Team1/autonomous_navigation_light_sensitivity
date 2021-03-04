@@ -4,11 +4,11 @@ import os
 import cv2
 
 sys.path.insert(0, 'src')
-from etl import move_data
-from eda import main_eda
-from utils import convert_notebook
+#from etl import move_data
+#from eda import main_eda
+#from utils import convert_notebook
 from compare import view_results
-from evaluate import find_best_model
+#from evaluate import find_best_model
 
 def main(targets):
 
