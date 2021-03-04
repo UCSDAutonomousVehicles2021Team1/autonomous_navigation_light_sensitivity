@@ -13,4 +13,4 @@ def move_data(source, data_fp):
     print("After moving data:")
     print(os.listdir(source))
     
-    print('Destination path: ' + data_fp)
+    print('Destination path: ' + dest)
