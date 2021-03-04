@@ -40,9 +40,5 @@ def compare_images(imageA, imageB, outdir):
     plt.show()
     # save figure
     plt.savefig(os.path.join(outdir, 'metrics.jpg')
-    # store metric values within a dictionary
-    metric_dict = {}
-    metric_dict['SSIM'] = s
-    metric_dict['MSE'] = m
     
-    return metric_dict
+    return 
