@@ -1,7 +1,7 @@
 import sys
 import json
 import os
-import cv2
+
 
 sys.path.insert(0, 'src')
 from etl import load_data
