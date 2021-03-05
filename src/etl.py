@@ -8,7 +8,7 @@ def copy_data(source, data_fp):
     print("Data in my source folder:")
     print(os.listdir(source))
     
-    for i in os.listdir(source)[:-1]:
+    for i in os.listdir(source):
         shutil.copy(i, data_fp)
    
     print('After copying: ' + os.listdir(data_fp))
