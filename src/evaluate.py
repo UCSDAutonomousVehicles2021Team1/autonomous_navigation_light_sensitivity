@@ -15,6 +15,8 @@ def runtime_performance_eval(lap_data, outdir):
     f.write("Runtime performance for tuned configuration under bright settings: %s" % tuned)
     f.write("\n")
     f.write("Similarity in runtime performance between default and best-tuned configurations: %s" % similarity)
+    f.close()
+    os.path.join(outdir, "runtime_evaluation_result.txt")
     
 
 # measures how consistent the luminescence of mobile image data is across one track lap's time, using standard deviation
