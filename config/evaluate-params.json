@@ -1,1 +1,4 @@
-
+{
+    "lap_data": ["data/lap_default", "data/lap_tuned"],
+    "outdir": "report/runtime_validity"
+}
