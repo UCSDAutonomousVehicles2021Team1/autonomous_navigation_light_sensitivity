@@ -18,6 +18,8 @@ def runtime_performance_eval(lap_data, outdir):
     f.close()
     os.path.join(outdir, "runtime_evaluation_result.txt")
     
+    return
+    
 
 # measures how consistent the luminescence of mobile image data is across one track lap's time, using standard deviation
 # as a metric of variability
