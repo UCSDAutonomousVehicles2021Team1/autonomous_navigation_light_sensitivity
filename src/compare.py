@@ -78,7 +78,7 @@ def tuned_results(imageA, imageC, outdir):
     return tuned_dict
    
 
-def plot_ssim(dict_1, dict_2):
+def plot_ssim(dict_1, dict_2, outdir):
     #labels = ['moderate sharpness', 'low sharpness', 'lower white balance', 'low contrast', 'low saturation']
     labels = ['lower white balance']
     x = np.arange(len(labels))
@@ -113,7 +113,7 @@ def plot_ssim(dict_1, dict_2):
     return
     
     
-def plot_mse(dict_1, dict_2):
+def plot_mse(dict_1, dict_2, outdir):
     
     labels = ['lower white balance']
     x = np.arange(len(labels))
