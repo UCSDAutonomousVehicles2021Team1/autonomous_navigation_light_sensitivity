@@ -38,16 +38,19 @@ def main(targets):
         
     
     if 'evaluate' in targets:
-        best_tuning_result = find_best_model(model_names, **evaluate_config)
+        baseline_runtime_performance = runtime_performance_eval(**evaluate_config)
+        tuned_runtime_performance = runtime_performanc_eval(**evaluate_config)
         
     
     if 'test' in targets:
         move_data(**data_config)
         main_eda(data, **eda_config)
         convert_notebook(**eda_config)
-        model_names = compare_images(**comparison_config)
-        best_tuning_result = find_best_model(model_names, **evaluate_config)
-        print("Found best tuning result: {}".format(best_tuning_result))
+        view_results(**comparison_config)
+        baseline_runtime_performance = runtime_performance_eval(**evaluate_config)
+        tuned_runtime_performance = runtime_performanc_eval(**evaluate_config)
+        print("Baseline runtime performance: {}".format(baseline_runtime_performance))
+        print("Best tuned runtime performance: {}".format(tuned_runtime_performance))
         
     
 if __name__ == '__main__':
