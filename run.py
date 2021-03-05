@@ -2,7 +2,6 @@ import sys
 import json
 import os
 
-
 sys.path.insert(0, 'src')
 from etl import load_data
 #from eda import main_eda
