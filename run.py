@@ -4,7 +4,7 @@ import os
 import cv2
 
 sys.path.insert(0, 'src')
-from etl import move_data
+from etl import copy_data
 #from eda import main_eda
 #from utils import convert_notebook
 from compare import view_results
@@ -18,7 +18,7 @@ def main(targets):
     #evaluate_config = json.load(open('config/evaluate-params.json'))
 
     if 'data' in targets:
-        move_data(**data_config)
+        copy_data(**data_config)
         
     
     if 'eda' in targets:
