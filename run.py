@@ -4,7 +4,7 @@ import os
 import cv2
 
 sys.path.insert(0, 'src')
-from etl import copy_data
+from etl import load_data
 #from eda import main_eda
 #from utils import convert_notebook
 from compare import view_results
@@ -19,7 +19,7 @@ def main(targets):
     test_config = json.load(open('config/test-params.json))
 
     if 'data' in targets:
-        copy_data(**data_config)
+        load_data(**data_config)
         
     
     if 'eda' in targets:
@@ -38,8 +38,7 @@ def main(targets):
         
     
     if 'evaluate' in targets:
-        baseline_runtime_performance = runtime_performance_eval(**evaluate_config)
-        tuned_runtime_performance = runtime_performanc_eval(**evaluate_config)
+        runtime_performance_eval(**evaluate_config)
         
     
     if 'test' in targets:
@@ -47,10 +46,7 @@ def main(targets):
         main_eda(data, **eda_config)
         convert_notebook(**eda_config)
         view_results(**comparison_config)
-        baseline_runtime_performance = runtime_performance_eval(**evaluate_config)
-        tuned_runtime_performance = runtime_performanc_eval(**evaluate_config)
-        print("Baseline runtime performance: {}".format(baseline_runtime_performance))
-        print("Best tuned runtime performance: {}".format(tuned_runtime_performance))
+        runtime_performance_eval(**evaluate_config)
         
         
     if 'all' in targets:
@@ -58,10 +54,7 @@ def main(targets):
         main_eda(data, **eda_config)
         convert_notebook(**eda_config)
         view_results(**comparison_config)
-        baseline_runtime_performance = runtime_performance_eval(**evaluate_config)
-        tuned_runtime_performance = runtime_performanc_eval(**evaluate_config)
-        print("Baseline runtime performance: {}".format(baseline_runtime_performance))
-        print("Best tuned runtime performance: {}".format(tuned_runtime_performance))
+        runtime_performance_eval(**evaluate_config)
     
 if __name__ == '__main__':
     
