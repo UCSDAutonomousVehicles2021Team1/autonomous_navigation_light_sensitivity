@@ -1,14 +1,19 @@
 import os
 import shutil
 
-def copy_data(source, data_fp):
+def load_data(single_source, lap_source, single_data_fp, lap_data_fp):
     #Creates the directory to copy data into
     os.makedirs(data_fp, exist_ok = True)
     
-    print("Data in my source folder:")
-    print(os.listdir(source))
+    print("Data in my single image data folder:")
+    print(os.listdir(single_source))
     
-    for i in os.listdir(source):
-        shutil.copy(source + i, data_fp)
-   
-    print('After copying: ' + str(os.listdir(data_fp)))
+    print("Data in my collective lap data folder:")
+    print(os.listdir(lap_source))
+    
+    for i in os.listdir(single_source):
+        shutil.copy(single_source + i, single_data_fp)
+    
+    for j in os.listdir(lap_source):
+        shutil.copytree(lap_source + j, lap_data_fp)
+    print('After loading data: ' + str(os.listdir(single_data_fp)))
