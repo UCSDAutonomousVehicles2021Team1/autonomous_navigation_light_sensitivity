@@ -10,14 +10,16 @@ def runtime_performance_eval(indir, outdir):
     tuned = runtime_performance(indir[1])
     similarity = np.round(1 - abs(default-tuned)/default , 3) * 100
     f = open("runtime_evaluation_result.txt", "w+")
-    f.write("Runtime performance for default, non-bright settings: %s" % default)
+    f.write("<b>Runtime performance evaluation (consistency of luminescence of recorded images over the duration of one lap run)<\b> \n\n")
+    f.write("Evaluated by the standard deviation of the perceived brightness formula across every images recorded over time \n\n")
+    f.write("Runtime performance for default, non-bright conditions: %s" % default)
     f.write("\n\n")
-    f.write("Runtime performance for tuned configuration under bright settings: %s" % tuned)
+    f.write("Runtime performance for tuned configuration under bright conditions: %s" % tuned)
     f.write("\n\n")
     f.write("Similarity in runtime performance between default and best-tuned configurations: %s" % similarity)
-    f.write("%")
+    f.write(" %")
     f.close()
-    os.path.join(outdir, "runtime_evaluation_result.txt")
+    os.path.join("submission_test", outdir, "runtime_evaluation_result.txt")
     
     return
     
