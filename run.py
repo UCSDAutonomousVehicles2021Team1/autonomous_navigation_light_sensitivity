@@ -8,14 +8,14 @@ from etl import load_data
 #from eda import main_eda
 #from utils import convert_notebook
 from compare import view_results
-#from evaluate import runtime_performance_eval
+from evaluate import runtime_performance_eval
 
 def main(targets):
 
     data_config = json.load(open('config/data-params.json'))
     eda_config = json.load(open('config/eda-params.json'))
     comparison_config = json.load(open('config/comparison-params.json'))
-    #evaluate_config = json.load(open('config/evaluate-params.json'))
+    evaluate_config = json.load(open('config/evaluate-params.json'))
     test_config = json.load(open('config/test-params.json'))
 
     if 'data' in targets:
