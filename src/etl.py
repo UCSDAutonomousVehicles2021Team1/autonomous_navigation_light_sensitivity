@@ -3,7 +3,8 @@ import shutil
 
 def load_data(single_source, lap_source, single_data_fp, lap_data_fp):
     #Creates the directory to copy data into
-    os.makedirs(data_fp, exist_ok = True)
+    os.makedirs(single_data_fp, exist_ok = True)
+    os.makedirs(lap_data_fp, exist_ok = True)
     
     print("Data in my single image data folder:")
     print(os.listdir(single_source))
@@ -16,4 +17,5 @@ def load_data(single_source, lap_source, single_data_fp, lap_data_fp):
     
     for j in os.listdir(lap_source):
         shutil.copytree(lap_source + j, lap_data_fp)
-    print('After loading data: ' + str(os.listdir(single_data_fp)))
+    print('After loading single image data: ' + str(os.listdir(single_data_fp)))
+    print('After loading collective lap data: ' + str(os.listdir(lap_data_fp)))
