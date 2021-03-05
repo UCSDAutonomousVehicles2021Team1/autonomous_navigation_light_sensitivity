@@ -1,6 +1,6 @@
 # autonomous_navigation_light_sensitivity
 
-Evaluation of Intel Realsense D455 camera's sensitivity to light. Focuses on the tuning work of camera configuration settings with ROS rqt plugin by using SSIM and MSE as a metric to find the best parameter combination that displays high structural similarity to the image under default setting conditions (non-bright).
+Evaluation of Intel Realsense D455 Depth camera's sensitivity to light. Focuses on the tuning work of camera configuration settings with ROS rqt plugin by using SSIM and MSE as a metric to find the best parameter combination that displays high structural similarity to the image under default setting conditions (non-bright).
 
 To run the repository, run ```python run.py test```
 
