@@ -6,6 +6,15 @@ from PIL import Image, ImageStat
 
 def runtime_performance_eval(lap_data, outdir):
     os.makedirs(outdir, exist_ok=True)
+    default = runtime_performance(lap_data[0])
+    tuned = runtime_performance(lap_data[1])
+    similarity = np.round(1 - abs(default-tuned)/default , 3) * 100
+    f = open("runtime_evaluation_result.txt", "w+")
+    f.write("Runtime performance for default, non-bright settings: %s" % default)
+    f.write("\n")
+    f.write("Runtime performance for tuned configuration under bright settings: %s" % tuned)
+    f.write("\n")
+    f.write("Similarity in runtime performance between default and best-tuned configurations: %s" % similarity)
     
 
 # measures how consistent the luminescence of mobile image data is across one track lap's time, using standard deviation
