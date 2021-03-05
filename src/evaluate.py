@@ -12,10 +12,11 @@ def runtime_performance_eval(indir, outdir):
     print(default, tuned, similarity)
     f = open("runtime_evaluation_result.txt", "w+")
     f.write("Runtime performance for default, non-bright settings: %s" % default)
-    f.write("\n")
+    f.write("\n\n")
     f.write("Runtime performance for tuned configuration under bright settings: %s" % tuned)
-    f.write("\n")
+    f.write("\n\n")
     f.write("Similarity in runtime performance between default and best-tuned configurations: %s" % similarity)
+    f.write("%")
     f.close()
     os.path.join(outdir, "runtime_evaluation_result.txt")
     
@@ -30,7 +31,7 @@ def runtime_performance(indir):
     for i in range(len(os.listdir(indir))):
         store_perceived.append(perceived_bn(indir, i))
     
-    runtime_performance = np.std(store_perceived) ** 2
+    runtime_performance = np.std(store_perceived)
     return runtime_performance
 
 # function to calculate perceived brightness which effectively measures luminescence of images using rgb color codes
