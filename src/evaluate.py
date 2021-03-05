@@ -4,7 +4,8 @@ import json
 import math
 from PIL import Image, ImageStat
 
-
+# measures how consistent the luminescence of mobile image data is across one track lap's time, using standard deviation
+# as a metric of variability
 def runtime_perfomrance_eval(baseline_fp):
     
     store_perceived = []
@@ -14,7 +15,7 @@ def runtime_perfomrance_eval(baseline_fp):
     runtime_performance = np.std(store_perceived) ** 2
     return runtime_performance
 
-# function to calculate 
+# function to calculate perceived brightness which effectively measures luminescence of images using rgb color codes
 def perceived_bn(baseline_fp, jpg):
     
     converted_num = "% s" % jpg
