@@ -8,7 +8,7 @@ from etl import copy_data
 #from eda import main_eda
 #from utils import convert_notebook
 from compare import view_results
-#from evaluate import find_best_model
+#from evaluate import runtime_performance_eval
 
 def main(targets):
 
@@ -16,6 +16,7 @@ def main(targets):
     eda_config = json.load(open('config/eda-params.json'))
     comparison_config = json.load(open('config/comparison-params.json'))
     #evaluate_config = json.load(open('config/evaluate-params.json'))
+    test_config = json.load(open('config/test-params.json))
 
     if 'data' in targets:
         copy_data(**data_config)
@@ -32,7 +33,6 @@ def main(targets):
         convert_notebook(**eda_config)
         
         
-        
     if 'comparison' in targets:
         view_results(**comparison_config)
         
@@ -43,7 +43,7 @@ def main(targets):
         
     
     if 'test' in targets:
-        move_data(**data_config)
+        move_data(**test_config)
         main_eda(data, **eda_config)
         convert_notebook(**eda_config)
         view_results(**comparison_config)
@@ -52,6 +52,16 @@ def main(targets):
         print("Baseline runtime performance: {}".format(baseline_runtime_performance))
         print("Best tuned runtime performance: {}".format(tuned_runtime_performance))
         
+        
+    if 'all' in targets:
+        move_data(**data_config)
+        main_eda(data, **eda_config)
+        convert_notebook(**eda_config)
+        view_results(**comparison_config)
+        baseline_runtime_performance = runtime_performance_eval(**evaluate_config)
+        tuned_runtime_performance = runtime_performanc_eval(**evaluate_config)
+        print("Baseline runtime performance: {}".format(baseline_runtime_performance))
+        print("Best tuned runtime performance: {}".format(tuned_runtime_performance))
     
 if __name__ == '__main__':
     
