@@ -6,7 +6,7 @@ from PIL import Image, ImageStat
 
 # measures how consistent the luminescence of mobile image data is across one track lap's time, using standard deviation
 # as a metric of variability
-def runtime_perfomrance_eval(baseline_fp):
+def runtime_performance_eval(baseline_fp):
     
     store_perceived = []
     for i in range(len(os.listdir(baseline_fp))):
