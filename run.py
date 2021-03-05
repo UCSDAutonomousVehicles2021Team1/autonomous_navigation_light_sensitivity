@@ -22,12 +22,7 @@ def main(targets):
         load_data(**data_config)
         
     
-    if 'eda' in targets:
-        try:
-            data
-        except NameError:
-            data = cv2.imread(data_config['data_fp'])
-            
+    if 'eda' in targets:        
         main_eda(data, **eda_config)
         # Execute notebook, convert to HTML
         convert_notebook(**eda_config)
