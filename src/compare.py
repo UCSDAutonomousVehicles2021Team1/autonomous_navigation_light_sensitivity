@@ -12,8 +12,8 @@ def view_results(files, outdir):
     imageA, imageB, imageC = cv2.imread(files[0]), cv2.imread(files[1]), cv2.imread(files[2])
     a = baseline_results(imageA, imageB, outdir)
     b = tuned_results(imageA, imageC, outdir)
-    plot_ssim(a, b)
-    plot_mse(a, b)
+    plot_ssim(a, b, outdir)
+    plot_mse(a, b, outdir)
     
 
 def calculate_mse(imageA, imageB):
