@@ -33,9 +33,9 @@ def perceived_bn(lap_data, jpg):
     
     converted_num = "% s" % jpg
     if (jpg < 10):
-        jpg_string = baseline_fp + '/frame000' + converted_num + '.jpg'
+        jpg_string = lap_data + '/frame000' + converted_num + '.jpg'
     else:
-        jpg_string = baseline_fp + '/frame00' + converted_num + '.jpg'
+        jpg_string = lap_data + '/frame00' + converted_num + '.jpg'
     img = Image.open(jpg_string)
     stat = ImageStat.Stat(img)
     r,g,b = stat.rms
