@@ -4,19 +4,23 @@ import json
 import math
 from PIL import Image, ImageStat
 
+def runtime_performance_eval(lap_data, outdir):
+    os.makedirs(outdir, exist_ok=True)
+    
+
 # measures how consistent the luminescence of mobile image data is across one track lap's time, using standard deviation
 # as a metric of variability
-def runtime_performance_eval(baseline_fp):
+def runtime_performance(lap_data):
     
     store_perceived = []
-    for i in range(len(os.listdir(baseline_fp))):
-        store_perceived.append(perceived_bn(baseline_fp, i))
+    for i in range(len(os.listdir(lap_data))):
+        store_perceived.append(perceived_bn(lap_data, i))
     
     runtime_performance = np.std(store_perceived) ** 2
     return runtime_performance
 
 # function to calculate perceived brightness which effectively measures luminescence of images using rgb color codes
-def perceived_bn(baseline_fp, jpg):
+def perceived_bn(lap_data, jpg):
     
     converted_num = "% s" % jpg
     if (jpg < 10):
