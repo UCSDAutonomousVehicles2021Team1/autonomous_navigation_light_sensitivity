@@ -16,7 +16,6 @@ def load_data(single_source, lap_source, single_data_fp, lap_data_fp):
         shutil.copy(single_source + i, single_data_fp)
     
     for j in os.listdir(lap_source):
-        if os.path.isdir(j):
-           shutil.copytree(lap_source + j, lap_data_fp, symlink=False, ignore=None)
+        shutil.copytree(lap_source + j, lap_data_fp)
     print('After loading single image data: ' + str(os.listdir(single_data_fp)))
     print('After loading collective lap data: ' + str(os.listdir(lap_data_fp)))
