@@ -26,7 +26,7 @@ def main_eda(datadir, outdir, **kwargs):
     
     # Generate and save the final merged image (average pixel image of all images in a track lap data).
     merged = Image.fromarray(arr, mode="RGB")
-    os.path.join(outdir, merged.save("average_picture.jpg"))
+    merged.save(outdir+"average_pixel_picture.jpg")
     
     return
  
