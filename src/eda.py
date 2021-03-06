@@ -1,8 +1,7 @@
 # import the necessary packages
-import matplotlib.pyplot as plt
+import os
 import numpy as np
-import cv2
-import pandas as pd
+from PIL import Image
 
 def main_eda(datadir, outdir, **kwargs):
   
