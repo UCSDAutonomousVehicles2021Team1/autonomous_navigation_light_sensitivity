@@ -1,6 +1,6 @@
 {
-    "datadir": "data/single_img/default_track.jpg",
-    "outdir": "results/eda/",
+    "datadir": "data/lap_data/default_lap/",
+    "outdir": "results/",
     "report_in_path": "notebooks/report.ipynb",
     "report_out_path": "report/report.html"
   
