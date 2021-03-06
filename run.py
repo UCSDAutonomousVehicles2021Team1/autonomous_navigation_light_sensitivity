@@ -37,7 +37,7 @@ def main(targets):
     
     if 'test' in targets:
         load_data(**test_config)
-        main_eda(data, **eda_config)
+        main_eda(**eda_config)
         convert_notebook(**eda_config)
         view_results(**comparison_config)
         runtime_performance_eval(**evaluate_config)
