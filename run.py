@@ -36,7 +36,7 @@ def main(targets):
         
     
     if 'test' in targets:
-        move_data(**test_config)
+        load_data(**test_config)
         main_eda(data, **eda_config)
         convert_notebook(**eda_config)
         view_results(**comparison_config)
@@ -44,7 +44,7 @@ def main(targets):
         
         
     if 'all' in targets:
-        move_data(**data_config)
+        load_data(**data_config)
         main_eda(data, **eda_config)
         convert_notebook(**eda_config)
         view_results(**comparison_config)
