@@ -4,8 +4,8 @@ import os
 
 sys.path.insert(0, 'src')
 from etl import load_data
-#from eda import main_eda
-#from utils import convert_notebook
+from eda import main_eda
+from utils import convert_notebook
 from compare import view_results
 from evaluate import runtime_performance_eval
 
