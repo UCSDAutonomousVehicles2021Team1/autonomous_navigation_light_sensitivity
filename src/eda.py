@@ -4,7 +4,8 @@ import numpy as np
 from PIL import Image
 
 def main_eda(datadir, outdir, **kwargs):
-  
+    
+    os.makedirs(outdir, exist_ok = True)
     # access all .jpg files in the directory.
     allfiles = os.listdir(datadir)
     img_lst = [datadir + file for file in allfiles if file[-4:] in ['.jpg']]
