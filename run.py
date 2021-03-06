@@ -22,7 +22,7 @@ def main(targets):
         
     
     if 'eda' in targets:        
-        main_eda(data, **eda_config)
+        main_eda(**eda_config)
         # Execute notebook, convert to HTML
         convert_notebook(**eda_config)
         
