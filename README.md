@@ -13,6 +13,7 @@ To run the repository, run ```python run.py test```
 
 ## What does it do
 
+Takes single image file (default and tuned) and set of image files (default and tuned) as test data and returns metric results (SSIM, MSE) within visualization in /results. Generates a .txt file with runtime performance stats and similarity level between sets of image files (default and tuned).  
 
 ## Targets
 
@@ -45,8 +46,8 @@ Runs all the previous targets on test data to confirm that all the results we ou
    
 2. Build the Docker image.
 
-   ```docker build -t camera_tuning 
-      docker run --rm -it camera_tuning /bin/bash.```
+   ```docker build -t camera_tuning ```
+   ```docker run --rm -it camera_tuning /bin/bash.```
 
 3. Modify target parameters by going to config/
 
@@ -54,14 +55,16 @@ Runs all the previous targets on test data to confirm that all the results we ou
 
    ```python run.py all```
 
-5. If you want to see a test run, 
+   If you want to see a test run, 
 
    ```python run.py test```
    
+5. Once you are done, confirm in /results the data inputs that bring about the highest SSIM and lowest MSE, as well as a significantly improved similarity level in runtime performance evaluation (> 80%). You can then use those image data inputs and tuned configuration for the car.
    
-
-
+   
 ## References
 
 * utils.py and creation of notebook for EDA taken from Aaron Fraenkel: https://github.com/afraenkel
+
+* The tuning guideline for Intel Realsense D455 Camera is based off: https://www.intel.com/content/dam/support/us/en/documents/emerging-technologies/intel-realsense-technology/BKMs_Tuning_RealSense_D4xx_Cam.pdf
 
