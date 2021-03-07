@@ -6,9 +6,9 @@ To run the repository, run ```python run.py test```
 
 **Table of Contents**
 - [What does it do](#what-does-it-do)
-- [Targets] (#targets)
-- [Usage Instructions] (#usage-instructions)
-- [References] (#references)
+- [Targets](#Targets)
+- [Usage Instructions](#usage-instructions)
+- [References](#References)
 
 
 ## What does it do
@@ -36,3 +36,9 @@ Implements and measures runtime performance of our best-tuned configuration's ab
 5. test:
 
 Runs all the previous targets on test data to confirm that all the results we output is shown in the main repository.
+
+
+## References
+
+* utils.py and creation of notebook for EDA taken from Aaron Fraenkel: https://github.com/afraenkel
+
