@@ -41,7 +41,24 @@ Runs all the previous targets on test data to confirm that all the results we ou
 
 1. Clone this repository.
 
-```git clone https://github.com/dys525/autonomous_navigation_light_sensitivity.git```
+   ```git clone https://github.com/dys525/autonomous_navigation_light_sensitivity.git```
+   
+2. Build the Docker image.
+
+   ```docker build -t camera_tuning 
+      docker run --rm -it camera_tuning /bin/bash.```
+
+3. Modify target parameters by going to config/
+
+4. Once you have made all the changes to the configs (you only need to change the data inputs) run the following command
+
+   ```python run.py all```
+
+5. If you want to see a test run, 
+
+   ```python run.py test```
+   
+   
 
 
 ## References
