@@ -37,6 +37,12 @@ Implements and measures runtime performance of our best-tuned configuration's ab
 
 Runs all the previous targets on test data to confirm that all the results we output is shown in the main repository.
 
+## Usage Instructions
+
+1. Clone this repository.
+
+```git clone https://github.com/dys525/autonomous_navigation_light_sensitivity.git```
+
 
 ## References
 
