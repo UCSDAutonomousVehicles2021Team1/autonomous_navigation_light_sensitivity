@@ -1,8 +1,0 @@
-{
-    "config": ["config/data-params.json", "config/eda-params.json", "config/comparison-params.json", "config/evaluate-params.json", "config/test-params.json"],
-    "build": "run.py",
-    "library": ["src"],
-    "notebook": ["notebooks/report.ipynb"],
-    "targets": ["data", "eda", "comparison", "evaluate", "test", "all"],
-    "dockerhub-id": "dys525/dsc180b_camera_tuning:latest"
-}
