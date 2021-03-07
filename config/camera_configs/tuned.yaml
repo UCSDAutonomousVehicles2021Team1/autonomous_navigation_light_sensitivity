@@ -37,7 +37,7 @@ dictitems:
       sharpness: 50
       state: true
       type: ''
-      white_balance: 3885.0
+      white_balance: 3500.0
     state: []
   hue: 0
   power_line_frequency: 3
