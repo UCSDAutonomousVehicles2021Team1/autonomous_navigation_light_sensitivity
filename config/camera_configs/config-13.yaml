@@ -43,5 +43,5 @@ dictitems:
   power_line_frequency: 3
   saturation: 64
   sharpness: 50
-  white_balance: 3885.0
+  white_balance: 3500.0
 state: []
