@@ -13,7 +13,7 @@ To run the repository, run ```python run.py test```
 
 ## What does it do
 
-Takes single image file (default and tuned) and set of image files (default and tuned) as test data and returns metric results (SSIM, MSE) within visualization in /results. Generates a .txt file with runtime performance stats and similarity level between sets of image files (default and tuned).  
+Takes single image file (default vs. tuned) and set of image files (default vs. tuned) as test data and returns metric results (SSIM, MSE) within visualization in /results. Generates a .txt file with runtime performance stats and similarity level between sets of image files (default vs. tuned).  
 
 ## Targets
 
